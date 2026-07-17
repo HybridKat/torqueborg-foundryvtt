@@ -6,7 +6,7 @@ import { TorqueBorgActorSheet } from './sheets/actor-sheet.mjs';
 import { TorqueBorgItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
-import { BOILERPLATE } from './helpers/config.mjs';
+import { TORQUEBORG } from './helpers/config.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -24,7 +24,7 @@ Hooks.once('init', function () {
   };
 
   // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
+  CONFIG.TORQUEBORG = TORQUEBORG;
 
   /**
    * Set an initiative formula for the system
@@ -61,12 +61,12 @@ Hooks.once('init', function () {
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('torqueborg', TorqueBorgActorSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Actor',
+    label: 'TORQUEBORG.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('torqueborg', TorqueBorgItemSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Item',
+    label: 'TORQUEBORG.SheetLabels.Item',
   });
 
   // Preload Handlebars templates.
