@@ -1,3 +1,3 @@
-import BoilerplateItemBase from "./base-item.mjs";
+import TorqueBorgItemBase from "./base-item.mjs";
 
-export default class BoilerplateFeature extends BoilerplateItemBase {}
+export default class TorqueBorgFeature extends TorqueBorgItemBase {}

@@ -1,6 +1,6 @@
-import BoilerplateDataModel from "./base-model.mjs";
+import TorqueBorgDataModel from "./base-model.mjs";
 
-export default class BoilerplateItemBase extends BoilerplateDataModel {
+export default class TorqueBorgItemBase extends TorqueBorgDataModel {
 
   static defineSchema() {
     const fields = foundry.data.fields;

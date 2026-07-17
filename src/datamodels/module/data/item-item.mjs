@@ -1,6 +1,6 @@
-import BoilerplateItemBase from "./base-item.mjs";
+import TorqueBorgItemBase from "./base-item.mjs";
 
-export default class BoilerplateItem extends BoilerplateItemBase {
+export default class TorqueBorgItem extends TorqueBorgItemBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;

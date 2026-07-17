@@ -1,9 +1,9 @@
 // Import document classes.
-import { BoilerplateActor } from './documents/actor.mjs';
-import { BoilerplateItem } from './documents/item.mjs';
+import { TorqueBorgActor } from './documents/actor.mjs';
+import { TorqueBorgItem } from './documents/item.mjs';
 // Import sheet classes.
-import { BoilerplateActorSheet } from './sheets/actor-sheet.mjs';
-import { BoilerplateItemSheet } from './sheets/item-sheet.mjs';
+import { TorqueBorgActorSheet } from './sheets/actor-sheet.mjs';
+import { TorqueBorgItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { BOILERPLATE } from './helpers/config.mjs';
@@ -15,9 +15,9 @@ import { BOILERPLATE } from './helpers/config.mjs';
 Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.boilerplate = {
-    BoilerplateActor,
-    BoilerplateItem,
+  game.torqueborg = {
+    TorqueBorgActor,
+    TorqueBorgItem,
     rollItemMacro,
   };
 
@@ -34,8 +34,8 @@ Hooks.once('init', function () {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = BoilerplateActor;
-  CONFIG.Item.documentClass = BoilerplateItem;
+  CONFIG.Actor.documentClass = TorqueBorgActor;
+  CONFIG.Item.documentClass = TorqueBorgItem;
 
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
@@ -44,12 +44,12 @@ Hooks.once('init', function () {
 
   // Register sheet application classes
   Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('boilerplate', BoilerplateActorSheet, {
+  Actors.registerSheet('torqueborg', TorqueBorgActorSheet, {
     makeDefault: true,
     label: 'BOILERPLATE.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('boilerplate', BoilerplateItemSheet, {
+  Items.registerSheet('torqueborg', TorqueBorgItemSheet, {
     makeDefault: true,
     label: 'BOILERPLATE.SheetLabels.Item',
   });
@@ -99,7 +99,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.boilerplate.rollItemMacro("${data.uuid}");`;
+  const command = `game.torqueborg.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );
@@ -109,7 +109,7 @@ async function createItemMacro(data, slot) {
       type: 'script',
       img: item.img,
       command: command,
-      flags: { 'boilerplate.itemMacro': true },
+      flags: { 'torqueborg.itemMacro': true },
     });
   }
   game.user.assignHotbarMacro(macro, slot);

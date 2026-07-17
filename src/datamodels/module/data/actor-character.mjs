@@ -1,6 +1,6 @@
-import BoilerplateActorBase from "./base-actor.mjs";
+import TorqueBorgActorBase from "./base-actor.mjs";
 
-export default class BoilerplateCharacter extends BoilerplateActorBase {
+export default class TorqueBorgCharacter extends TorqueBorgActorBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;
