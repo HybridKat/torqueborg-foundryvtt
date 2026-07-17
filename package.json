@@ -10,8 +10,8 @@
   "browserslist": [
     "last 3 versions"
   ],
-  "author": "Asacolips",
-  "license": "MIT",
+  "author": "Belug & HybridKat",
+  "license": "MB3PL",
   "private": true,
   "devDependencies": {
     "glob": "^10.3.10",

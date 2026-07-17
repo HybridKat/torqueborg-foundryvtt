@@ -15,8 +15,15 @@
             "name": "HybridKat"
         }
     ],
-    "esmodules": ["torque-borg.mjs"],
-    "styles": ["styles/system-stules.css"],
+    "media": [
+      {
+        "type": "setup",
+        "url": "systems/torque-borg/assets/anvil-impact.png",
+        "thumbnail": "systems/torque-borg/assets/anvil-impact.png"
+      }
+    ],
+    "esmodules": ["module/torqueborg.mjs"],
+    "styles": ["css/torqueborg.css"],
     "packs": [
         {
             "name": "Torque-borg-actors",
