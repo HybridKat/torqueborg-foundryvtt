@@ -1,0 +1,68 @@
+{
+    "id": "torque-borg",
+    "title": "TORQUE BORG",
+    "Description": "A radioactive, sandblasted, rules light, art heavy wasteland TTRPG. Based on MÖRK BORG.",
+    "version": "0.0.0",
+    "compatibility": {
+        "minimum": 12,
+        "verified": 14
+    },
+    "authors": [
+        {
+            "name": "Belug"
+        },
+        {
+            "name": "HybridKat"
+        }
+    ],
+    "esmodules": ["torque-borg.mjs"],
+    "styles": ["styles/system-stules.css"],
+    "packs": [
+        {
+            "name": "Torque-borg-actors",
+            "label": "TORQUE BORG (Actors)",
+            "system": "torque-borg",
+            "path": ".packs/Torque-borg-actors",
+            "type": "Actor"
+        },
+        {
+            "name": "torque-borg-items",
+            "label": "TORQUE BORG (Items)",
+            "system": "torque-borg",
+            "path": ".packs/Torque-borg-items",
+            "type": "Item"
+        },
+        {
+            "name": "Torque-borg-macros",
+            "label": "TORQUE BORG (Macros)",
+            "system": "torque-borg",
+            "path": ".packs/Torque-borg-macros",
+            "type": "Macro"
+        },
+        {
+            "name": "Torque-borg-tables",
+            "label": "TORQUE BORG (Tables)",
+            "system": "torque-borg",
+            "path": ".packs/Torque-borg-tables",
+            "type": "RollTable"
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": true,
+    "initiative": "1d6"
+    "grid": {
+        "distance": 10,
+        "units": "ft"
+    },
+    "primaryTokenAttribute": "attributes.hp",
+    "secondaryTokenAttribute": null,
+    "url": "https://github.com/HybridKat/torqueborg-foundryvtt",
+    "manifest": "https://github.com/HybridKat/torqueborg-foundryvtt/releases/latest/download/system.json",
+    "download": "https://github.com/HybridKat/torqueborg-foundryvtt/releases/latest/download/system.zip"
+}
