@@ -62,7 +62,7 @@
         }
     ],
     "socket": true,
-    "initiative": "1d6"
+    "initiative": "1d6",
     "grid": {
         "distance": 10,
         "units": "ft"

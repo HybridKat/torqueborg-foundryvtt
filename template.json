@@ -25,7 +25,7 @@
     },
     "waster": {
       "templates": ["character"],
-      "crank": 0
+      "crank": 0,
       "attributes":{
         "carryingCapacity": {
           "value": 8
@@ -149,7 +149,7 @@
       "templates": ["base"]
     },
     "container": {
-      "templates": ["base"]
+      "templates": ["base"],
       "description": "",
       "crank": 0,
       "capacity": {
