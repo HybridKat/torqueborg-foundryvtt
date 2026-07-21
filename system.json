@@ -1,7 +1,7 @@
 {
-    "id": "torque-borg",
+    "id": "torqueborg",
     "title": "TORQUE BORG",
-    "Description": "A radioactive, sandblasted, rules light, art heavy wasteland TTRPG. Based on MÖRK BORG.",
+    "description": "A radioactive, sandblasted, rules light, art heavy wasteland TTRPG. Based on MÖRK BORG.",
     "version": "0.0.0",
     "compatibility": {
         "minimum": 12,
@@ -18,8 +18,8 @@
     "media": [
       {
         "type": "setup",
-        "url": "systems/torque-borg/assets/anvil-impact.png",
-        "thumbnail": "systems/torque-borg/assets/anvil-impact.png"
+        "url": "systems/torqueborg/assets/anvil-impact.png",
+        "thumbnail": "systems/torqueborg/assets/anvil-impact.png"
       }
     ],
     "esmodules": ["module/torqueborg.mjs"],
@@ -28,28 +28,28 @@
         {
             "name": "Torque-borg-actors",
             "label": "TORQUE BORG (Actors)",
-            "system": "torque-borg",
+            "system": "torqueborg",
             "path": ".packs/Torque-borg-actors",
             "type": "Actor"
         },
         {
             "name": "torque-borg-items",
             "label": "TORQUE BORG (Items)",
-            "system": "torque-borg",
+            "system": "torqueborg",
             "path": ".packs/Torque-borg-items",
             "type": "Item"
         },
         {
             "name": "Torque-borg-macros",
             "label": "TORQUE BORG (Macros)",
-            "system": "torque-borg",
+            "system": "torqueborg",
             "path": ".packs/Torque-borg-macros",
             "type": "Macro"
         },
         {
             "name": "Torque-borg-tables",
             "label": "TORQUE BORG (Tables)",
-            "system": "torque-borg",
+            "system": "torqueborg",
             "path": ".packs/Torque-borg-tables",
             "type": "RollTable"
         }
@@ -71,5 +71,132 @@
     "secondaryTokenAttribute": null,
     "url": "https://github.com/HybridKat/torqueborg-foundryvtt",
     "manifest": "https://github.com/HybridKat/torqueborg-foundryvtt/releases/latest/download/system.json",
-    "download": "https://github.com/HybridKat/torqueborg-foundryvtt/releases/latest/download/system.zip"
+    "download": "https://github.com/HybridKat/torqueborg-foundryvtt/releases/latest/download/system.zip",
+
+
+    "documentTypes": {
+        "Actor": {
+            "Waster": {
+                "htmlFields": ["biography"],
+                "crank": 0,
+                "abilities": {
+                    "agility": {
+                        "value": 0
+                    },
+                    "presence": {
+                        "value": 0
+                    },
+                    "strength": {
+                        "value": 0
+                    },
+                    "toughness": {
+                        "value": 0
+                    },
+                    "cognition": {
+                        "value": 0
+                    }
+                },
+                "attributes":{
+                    "carryingCapacity": {
+                        "value": 8
+                    },
+                    "hp": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "dumbLuck": {
+                        "value": 1,
+                        "modifier": 0
+                    },
+                    "speed": {
+                        "min": 0,
+                        "max": 6,
+                        "value": 6
+                    },
+                    "armor": {
+                        "formula": "0",
+                        "description": ""
+                    },
+                    "combat": {
+                        "rangeAttackModifier": 0,
+                        "meleeAttackModifier": 0,
+                        "defenceModifier": 0,
+                        "initiativeModifier": 0,
+                        "rangeDamageModifier": 0,
+                        "armorTierModifier": 0,
+                        "luckDieModifier": 0,
+                        "drModifier": 0
+                    }
+                }
+            },
+
+            "npc": {
+                "attributes":{
+                    "hp": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "speed": {
+                        "min": 0,
+                        "max": 6,
+                        "value": 6
+                    },
+                    "armor": {
+                        "formula": "0",
+                        "description": ""
+                    },
+                    "combat": {
+                        "rangeAttackModifier": 0,
+                        "meleeAttackModifier": 0,
+                        "defenceModifier": 0,
+                        "initiativeModifier": 0,
+                        "rangeDamageModifier": 0,
+                        "armorTierModifier": 0,
+                        "luckDieModifier": 0,
+                        "drModifier": 0
+                    }
+                }
+            },
+            "Vehicule": {
+                "abilities": {
+                    "agility": {
+                        "value": 0
+                    },
+                    "toughness": {
+                        "value": 0
+                    },
+                    "ram": {
+                        "value": 0
+                    }
+                },
+                "attributes": {
+                    "hp": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "armor": {
+                        "formula": "0",
+                        "description": ""
+                    },
+                    "passenger": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "fuel": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "modSlots": {
+                        "value": 0
+                    },
+                    "lightHardpoints": {
+                        "value": 0
+                    },
+                    "heavyHardpoints": {
+                        "value": 0
+                    }
+                }
+            }
+        }
+    }
 }
